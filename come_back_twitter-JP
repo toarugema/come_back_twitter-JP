@@ -1,0 +1,107 @@
+/* ==UserStyle==
+@name           twitter
+@namespace      github.com/openstyles/stylus
+@version        2024.10.01
+@description    destroy premium and change tweet
+@author         toarugema
+==/UserStyle== */
+@-moz-document url-prefix("https://x.com/") {
+    
+    /*
+    Grokを削除
+    from : https://userstyles.world/style/17150/hide-gay-elon-shit
+    */
+    a[href*='grok'] {
+        display: none;
+    }
+
+    /*
+    プレミアムを削除
+    from : https://userstyles.world/style/17150/hide-gay-elon-shit
+    */
+    a[href*='premium_sign_up'] {
+        display: none;
+    }
+
+    /*
+    認証済み組織を削除
+    */
+    a[href*='verified-orgs-signup'] {
+        display: none;
+    }
+
+    /*
+    右下のDMを削除
+    from : https://polygonote.com/2022_0308_18019/
+    */
+    .r-173mn98 {
+        visibility: hidden;
+    }
+    
+    
+    /*
+    サイドバーのフォントサイズを弄る
+    */
+    .r-adyw6z {
+        font-size: 19px;
+    }
+    
+    
+    /*
+    Xを鳥に戻す
+    from : https://gist.github.com/Y-dash/6bc973a1fab0134212de4cc47bb6791e#file-twitter-is-twitter-css
+    元のCSSから鳥の色を変更
+    */
+    path[d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"] {
+        d: path("M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z") !important;
+        /*fill: inherit !important;*/
+        fill: #1da1f2 !important;
+
+    }
+    
+    
+    /*
+    ポストするをツイートするに変える（未完成）
+    */
+    
+    /*左サイドバー*/
+    div.css-175oi2r.r-xoduu5:has(> span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc):not(.r-1udh08x ,.r-18u37iz):not(.r-1awozwy){
+        font-size: 0px;
+    }
+    /*ここがおかしくてオーディエンス選択時にツイートするが出てくる*/
+    div.css-175oi2r.r-xoduu5:has(> span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc):not(.r-1udh08x ,.r-18u37iz):not(.r-1awozwy):before{
+        position: relative;
+        top: 10px;
+        font-size: 17px;
+        content:"ツイートする";
+    }
+    
+    /*ポップアップツイート画面　なんもわからんいい感じに書き替えて欲しい*/
+    
+    /*
+    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:not(.r-1udh08x ,.r-18u37iz){
+        font-size: 0px;
+    }
+    */
+    
+    
+    
+    
+    /*TL上部ツイート画面　なんもわからんいい感じに書き替えて欲しい*/
+    /*
+    div > button > div > span > span{
+        font-size: 0px;
+    }
+    */
+    /*
+    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:has(> span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe){
+        font-size: 0px;
+    }
+    */
+    /*
+    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:not(.r-1udh08x ,.r-18u37iz){
+        font-size: 0px;
+    }
+    */
+    
+}
