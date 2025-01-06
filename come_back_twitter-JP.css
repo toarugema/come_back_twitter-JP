@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name           twitter
+@name           come back twitter-JP
 @namespace      github.com/openstyles/stylus
-@version        2024.10.01
+@version        1.0.0
 @description    destroy premium and change tweet
 @author         toarugema
 ==/UserStyle== */
@@ -29,7 +29,29 @@
     a[href*='verified-orgs-signup'] {
         display: none;
     }
-
+    
+    /*
+    収益化を削除
+    */
+    a[href*='monetization']{
+        display: none;
+    }
+    
+    /*
+    広告を削除
+    */
+    a[href*='gl-tw-tw-twitter-ads-rweb']{
+        display: none;
+    }
+    
+    /*
+    求人を削除
+    */
+    a[href*='jobs']{
+        display: none;
+    }
+    
+    
     /*
     右下のDMを削除
     from : https://polygonote.com/2022_0308_18019/
@@ -40,7 +62,7 @@
     
     
     /*
-    サイドバーのフォントサイズを弄る
+    サイドバーなどのフォントサイズを弄る（コミュニティノートが全て表示されない為）
     */
     .r-adyw6z {
         font-size: 19px;
@@ -53,55 +75,242 @@
     元のCSSから鳥の色を変更
     */
     path[d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"] {
+        
         d: path("M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z") !important;
-        /*fill: inherit !important;*/
-        fill: #1da1f2 !important;
+        /*
+        fill: inherit !important;
+        */
+        fill: rgb(77, 168, 224) !important;
 
     }
     
     
     /*
-    ポストするをツイートするに変える（未完成）
+    ダルマ版のXを鳥に戻す
+    */
+    path[d="M18.436 1.92h3.403l-7.433 8.495 8.745 11.563h-6.849l-5.363-7.012-6.136 7.012H1.4l7.951-9.088L.96 1.92h7.02l4.848 6.41 5.608-6.41zm-1.194 18.021h1.886L6.958 3.851H4.933l12.308 16.09z"]{
+        
+        d: path("M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z") !important;
+        
+        fill: rgb(77, 168, 224) !important;
+        
+    }
+        
+    
+    /*
+    ポストするをツイートするに変える
     */
     
     /*左サイドバー*/
-    div.css-175oi2r.r-xoduu5:has(> span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc):not(.r-1udh08x ,.r-18u37iz):not(.r-1awozwy){
+    
+    /*色を水色に戻す*/
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21{
+        
+        background-color: rgb(60, 134, 216) !important;
+        
+    } 
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci{
+            
+        color: rgb(255, 255, 255) !important;
+            
+    }
+    
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+        
         font-size: 0px;
     }
-    /*ここがおかしくてオーディエンス選択時にツイートするが出てくる*/
-    div.css-175oi2r.r-xoduu5:has(> span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc):not(.r-1udh08x ,.r-18u37iz):not(.r-1awozwy):before{
+
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:before{
+        
         position: relative;
-        top: 10px;
+        top: 12.5px;
         font-size: 17px;
         content:"ツイートする";
+
     }
     
-    /*ポップアップツイート画面　なんもわからんいい感じに書き替えて欲しい*/
     
     /*
-    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:not(.r-1udh08x ,.r-18u37iz){
-        font-size: 0px;
-    }
+    幅を狭くした時のUIに対応
     */
+    div.css-175oi2r.r-e7q0ms.r-1awozwy.r-12kyg2d>a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21{
+        
+        background-color: rgb(60, 134, 216) !important;
+        
+    }
+    
+    svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-1472mwg.r-lrsllp{
+        
+        color: rgb(255, 255, 255) !important;
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-15ysp7h.r-4wgw6l.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-1b43r93.r-1cwl3u0>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+        
+        font-size: 0px;
+        
+    }
+
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-15ysp7h.r-4wgw6l.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-1b43r93.r-1cwl3u0>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:before{
+        
+        position: relative;
+        top: 2.5px;
+        font-size: 15px;
+        content:"ツイート";
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-15ysp7h.r-4wgw6l.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l[data-testid="tweetButton"]>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-1b43r93.r-1cwl3u0>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+        
+        font-size: 0px;
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-15ysp7h.r-4wgw6l.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l[data-testid="tweetButton"]>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-1b43r93.r-1cwl3u0>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:before{
+        
+        position: relative;
+        top: 2.5px;
+        font-size: 15px;
+        content:"ツイート";
+        
+    }
     
     
-    
-    
-    /*TL上部ツイート画面　なんもわからんいい感じに書き替えて欲しい*/
     /*
-    div > button > div > span > span{
-        font-size: 0px;
+    TL上部ツイート画面
+    ツイートポップアップ
+    */
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l{
+
+        background-color: rgb(60, 134, 216) !important;
+        
+    }    
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci{
+        
+        color: rgb(255, 255, 255) !important;
+        
     }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe{
+        
+        font-size: 0px;
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-o7ynqc.r-6416eg.r-icoktb.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe:before{
+        
+        position: relative;
+        top: 2.5px;
+        font-size: 15px;
+        content:"ツイート";
+        
+    }
+    
+    /*
+    TL上部ツイート画面（ツイート内容入力時）
+    ツイートポップアップ
+    */
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l{
+        background-color: rgb(60, 134, 216) !important;
+    }
+    
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci{
+        
+        color: rgb(255, 255, 255) !important;
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe{
+        
+        font-size: 0px;
+        
+    }
+    
+    button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-1cwvpvk.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe:before{
+        
+        position: relative;
+        top: 2.5px;
+        font-size: 15px;
+        content:"ツイート";
+        
+    }
+    
+    /*
+    いいねをふぁぼに戻す
     */
     /*
-    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:has(> span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe){
-        font-size: 0px;
+    ふぁぼる前
+    */
+    path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
+        
+        d: path("M12 0L15.4 7.7L24 9.2L17.8 15.3L19.2 24L12 19.9L4.8 24L6.2 15.3L0 9.2L8.6 7.7L12 0L12 3.2L9.5 8.9L2.6 10L7.8 14.8L6.7 21.2L12 18L17.3 21.2L16.2 14.8L21.4 10L14.5 8.9L12 3.2 Z") !important;
+        transition-timing-function: ease-out;
+        transition-duration: 0.1s;
+                
     }
+    
+    
+    /*
+    ふぁぼった後
+    */
+    path[d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
+        
+        d: path("M5.53 15.37L4.17 24L11.76 19.87L19.3 24L17.85 15.37L24 9.2L15.47 7.7L11.76 0L7.91 7.7L0 9.2L5.53 15.37Z")  !important;
+        
+        color: rgb(244, 144, 12) !important;
+        
+    }
+    
+    /*
+    ふぁぼにカーソル合わせた時に周囲がオレンジになるように
+    */
+    div.css-175oi2r.r-xoduu5.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af.r-sdzlij.r-xf4iuw.r-o7ynqc.r-6416eg.r-1krxqcr.r-1ny4l3l{
+        
+        background: rgba(244, 144, 12,0.09) !important;
+        
+    }
+    
+    /*
+    ふぁぼにカーソル合わせた時に線がオレンジになるように
+    */
+    
+    div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5>svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-1xvli5t.r-1hdv0qi>g>path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
+        
+        color: rgb(244, 144, 12) !important;
+        
+    }
+    
+    
+    /*
+    ツイート詳細画面でもオレンジになるように
+    */
+    div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5>svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-50lct3.r-1srniue>g>path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
+        
+        color: rgb(244, 144, 12) !important;
+
+    }
+    
+    /*
+    ふぁぼられた数
     */
     /*
-    div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci:not(.r-1udh08x ,.r-18u37iz){
-        font-size: 0px;
-    }
+    カーソル重ねた時
     */
+    div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l[data-testid="like"]:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5.r-1udh08x>span>span.css-1jxf684.r-1ttztb7.r-qvutc0.r-1tl8opc.r-n6v787.r-1cwl3u0.r-1k6nrdp.r-n7gxbd>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+        
+        color: rgb(244, 144, 12) !important;
+        
+    }
+    /*
+    ふぁぼった後の数字
+    */
+    button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l[data-testid="unlike"]>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5.r-1udh08x>span>span.css-1jxf684.r-1ttztb7.r-qvutc0.r-1tl8opc.r-n6v787.r-1cwl3u0.r-1k6nrdp.r-n7gxbd>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+        
+        color: rgb(244, 144, 12) !important;
+        
+    }
+    
     
 }
