@@ -2,7 +2,7 @@
 @name           come back twitter-JP
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
-@description    destroy premium and change tweet
+@description    要らないものを消してポストをツイートに戻します
 @author         toarugema
 ==/UserStyle== */
 @-moz-document url-prefix("https://x.com/") {
