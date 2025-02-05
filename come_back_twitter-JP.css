@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           come back twitter-JP
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.2
 @description    要らないものを消してポストをツイートに戻します
 @author         toarugema
 ==/UserStyle== */
@@ -51,13 +51,28 @@
         display: none;
     }
     
+    /*
+    プレミアムにサブスクライブを削除
+    */
+    div.css-175oi2r.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x:has(>aside.css-175oi2r.r-1habvwh.r-eqz5dr.r-uaa2di.r-1mmae3n.r-3pj75a.r-bnwqim){
+        display: none;        
+    }
+    
+    
+    /*
+    「いま」を見つけようを削除    
+    */
+    div.css-175oi2r.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x:has(>section.css-175oi2r){
+        display: none;
+    }
+    
     
     /*
     右下のDMを削除
-    from : https://polygonote.com/2022_0308_18019/
     */
-    .r-173mn98 {
-        visibility: hidden;
+    
+    div.css-175oi2r.r-173mn98.r-1rtiivn.r-hvns9x.r-1jte41z.r-y42jk5 {
+        display: none;
     }
     
     
@@ -115,12 +130,12 @@
             
     }
     
-    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:has(>div>div.css-175oi2r.r-xoduu5){
         
         font-size: 0px;
     }
 
-    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:before{
+    a.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-19yznuf.r-64el8z.r-1fkl15p.r-o7ynqc.r-6416eg.r-1ny4l3l.r-1loqt21>div.css-146c3p1.r-bcqeeo.r-qvutc0.r-1tl8opc.r-q4m81j.r-a023e6.r-rjixqe.r-b88u0q.r-1awozwy.r-6koalj.r-18u37iz.r-16y2uox.r-1777fci>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc:has(>div>div.css-175oi2r.r-xoduu5):before{
         
         position: relative;
         top: 12.5px;
