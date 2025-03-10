@@ -10,6 +10,7 @@
     /*
     おすすめTLを削除
     おすすめTLを既に使っている場合おすすめTLのみになってしまうので、一度カスタムCSSをオフにしてホームを選択してください。
+    またリストTLを使っている場合は恐らく1つのTLしか見れなくなっていますのでコメントアウト推奨です。
     */
     div.css-175oi2r.r-14tvyh0.r-cpa5s6.r-16y2uox:has(>a[href*="/home"][aria-selected="false"]>div.css-175oi2r>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc.r-a023e6.r-rjixqe.r-majxgm.r-1awozwy.r-6koalj.r-18u37iz.r-1pi2tsx.r-1777fci.r-1l7z4oj.r-95jzfe.r-bnwqim>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc){
         
