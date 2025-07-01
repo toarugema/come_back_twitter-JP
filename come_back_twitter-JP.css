@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           come back twitter-JP
-@namespace      github.com/openstyles/stylus
-@version        1.0.3
+@namespace      https://github.com/toarugema/come_back_twitter-JP
+@version        1.0.4
 @description    要らないものを消してポストをツイートに戻します
 @author         toarugema
 ==/UserStyle== */
@@ -17,7 +17,25 @@
         display: none;
         
     }
+
+    /*
+    フォロー中の左に出てくるボタンを削除
+    もし、コレのせいでリストTLとかに切り替えられなくなった場合、コメントアウトの上連絡を頂ければ幸いです。
+    */
+    div.css-175oi2r.r-1537yvj.r-u8s1d.r-184en5c{
+        
+        display: none;
+        
+    }
     
+    /*
+    プレミアムにサブスクライブを削除
+    */
+    div.css-175oi2r.r-kemksi.r-1kqtdi0.r-1q9bdsx.r-rs99b7{
+        
+        display: none;
+        
+    }
     
     /*
     Grokを削除
@@ -75,6 +93,14 @@
     「いま」を見つけようを削除    
     */
     div.css-175oi2r.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x:has(>section.css-175oi2r){
+        display: none;
+    }
+    
+    
+    /*
+    まだ認証されていませんを削除
+    */
+    div.css-175oi2r.r-1q9bdsx.r-18u37iz.r-1h0z5md.r-1xpp3t0.r-1udh08x{    
         display: none;
     }
     
@@ -272,9 +298,14 @@
     */
     path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
         
-        d: path("M12 0L15.4 7.7L24 9.2L17.8 15.3L19.2 24L12 19.9L4.8 24L6.2 15.3L0 9.2L8.6 7.7L12 0L12 3.2L9.5 8.9L2.6 10L7.8 14.8L6.7 21.2L12 18L17.3 21.2L16.2 14.8L21.4 10L14.5 8.9L12 3.2 Z") !important;
+        d: path("M 18.4,22.2 C 17.6,22.6 13.1,19.2 12.3,19.2 11.4,19.2 7,22.7 6.3,22.3 5.6,21.8 7.6,16.3 7.3,15.5 7.1,14.8 2.2,11.7 2.5,10.9 2.7,10.1 8.5,10.4 9.2,9.8 9.7,9.3 11.2,3.7 12.1,3.7 12.9,3.7 14.5,9.2 15.1,9.7 15.8,10.3 21.6,9.9 21.9,10.7 22.1,11.4 17.4,14.8 17,15.4 16.8,16.3 18.9,21.6 18.4,22.2 Z") !important;
+        
+        fill-opacity: 0;
+        stroke: rgb(113, 118, 123);
+        stroke-width: 1.95;
+        
         transition-timing-function: ease-out;
-        transition-duration: 0.1s;
+        transition-duration: 0.125s;
                 
     }
     
@@ -284,9 +315,12 @@
     */
     path[d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
         
-        d: path("M 17.9,21.7 C 17.1,22.2 12,18.2 11.1,18.2 10.1,18.2 5.1,22.3 4.3,21.8 3.6,21.3 5.8,15.1 5.5,14.3 5.2,13.4 -0.3,9.9 0,9 0.3,8.1 6.8,8.4 7.6,7.8 8.3,7.3 9.9,0.9 10.9,0.9 11.8,0.9 13.6,7.2 14.3,7.7 15.1,8.3 21.6,7.9 21.9,8.7 22.2,9.6 16.8,13.3 16.5,14.1 16.2,15 18.6,21.1 17.9,21.7 Z")  !important;
+        d: path("M 18.4,22.2 C 17.6,22.6 13.1,19.2 12.3,19.2 11.4,19.2 7,22.7 6.3,22.3 5.6,21.8 7.6,16.3 7.3,15.5 7.1,14.8 2.2,11.7 2.5,10.9 2.7,10.1 8.5,10.4 9.2,9.8 9.7,9.3 11.2,3.7 12.1,3.7 12.9,3.7 14.5,9.2 15.1,9.7 15.8,10.3 21.6,9.9 21.9,10.7 22.1,11.4 17.4,14.8 17,15.4 16.8,16.3 18.9,21.6 18.4,22.2 Z")  !important;
         
-        color: rgb(244, 144, 12) !important;
+        fill-opacity: 1;
+        stroke: rgb(244, 144, 12);
+        fill: rgb(244, 144, 12) !important;
+        stroke-width: 1;
         
     }
     
@@ -305,7 +339,7 @@
     
     div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5>svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-1xvli5t.r-1hdv0qi>g>path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
         
-        color: rgb(244, 144, 12) !important;
+        stroke: rgb(244, 144, 12) !important;
         
     }
     
@@ -315,7 +349,7 @@
     */
     div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5>svg.r-4qtqp9.r-yyyyoo.r-dnmrzs.r-bnwqim.r-lrvibr.r-m6rgpd.r-50lct3.r-1srniue>g>path[d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"]{
         
-        color: rgb(244, 144, 12) !important;
+        stroke: rgb(244, 144, 12) !important;
 
     }
     
@@ -325,10 +359,12 @@
     /*
     カーソル重ねた時
     */
-    div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l[data-testid="like"]:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5.r-1udh08x>span>span.css-1jxf684.r-1ttztb7.r-qvutc0.r-1tl8opc.r-n6v787.r-1cwl3u0.r-1k6nrdp.r-n7gxbd>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
+    div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0>button.css-175oi2r.r-1777fci.r-bt1l66.r-bztko3.r-lrvibr.r-1loqt21.r-1ny4l3l[data-testid="like"]:hover>div.css-146c3p1.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1qd0xha.r-a023e6.r-rjixqe.r-16dba41.r-1awozwy.r-6koalj.r-1h0z5md.r-o7ynqc.r-clp7b1.r-3s2u2q>div.css-175oi2r.r-xoduu5.r-1udh08x>span[data-testid="app-text-transition-container"]>span.css-1jxf684.r-1ttztb7.r-qvutc0.r-1tl8opc.r-n6v787.r-1cwl3u0.r-1k6nrdp.r-n7gxbd>span.css-1jxf684.r-bcqeeo.r-1ttztb7.r-qvutc0.r-1tl8opc{
         
         color: rgb(244, 144, 12) !important;
         
+        /*transition-timing-function: ease-out;*/
+        transition-duration: 0.3s;
     }
     /*
     ふぁぼった後の数字
